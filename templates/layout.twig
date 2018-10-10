@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="vendor/@fortawesome/fontawesome-free/css/all.css">
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/dist/js/bootstrap.min.js">
+	<link rel="stylesheet" type="text/css" href="vendor/jquery/jquery.min.js">
+
+	<title> {{ title }} </title>
+</head>
+<body>
+	<header>
+		<h1>{{ title }}</h1>
+	</header>
+	<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="/">Twig testing</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li class="nav-item"><a href="/">Home</a></li>
+            <li class="nav-item"><a href="/?p=export">Presentation</a></li>
+            <li class="nav-item"><a href="/?p=listall">Company</a></li>
+            <li class="nav-item"><a href="/?p=newemployee">Contact</a></li>
+        </ul>
+    </div>
+	</nav>
+	<main>
+		{% block content %}
+		{% endblock %}
+	</main>
+	<footer>  </footer>
+
+	<!-- Javascript libraries-->
+	<script type="text/javascript" src="vendor/jquery/jquery.min.js"></script>
+	<script type="text/javascript" src="vendor/jquery-validation/dist/jquery.validate.min.js"></script>
+	<script type="text/javascript" src="vendor/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js"></script>
+	<script type="text/javascript" src="vendor/multi-step-form-js/src/multi-step-form.js"></script>
+	<script type="text/javascript" src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+</html>

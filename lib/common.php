@@ -72,6 +72,19 @@ class AdminLogin
 		}
 	}
 }
+class NewUser
+{
+	//TODO: Implement this
+	private $pdo;
+	private $user;
+	private $passwd;
+	function __construct(string $user, string $passwd, PDO $pdo)
+	{
+		$this->user = $user;
+		$this->passwd = $passwd;
+		$this->pdo = $pdo;
+	}
+}
 class GetEmployees //Read
 {
 	private $pdo;
@@ -81,7 +94,7 @@ class GetEmployees //Read
 		$this->pdo = $pdo;
 		$this->limit = $limit;
 	}
-	public function all ($option) //Option: determines if there'll be limit
+	public function getEmployees ($option) //Option: determines if there'll be limit
 	{
 		//if implementing limits and pagination, replace LIMIT DEFAULT when needed
 		$sql = file_get_contents(__DIR__ . '/../lib/select.all.employees.sql');
